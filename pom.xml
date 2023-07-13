@@ -192,6 +192,12 @@
                 <groupId>br.com.softplan.security.zap</groupId>
                 <artifactId>zap-maven-plugin</artifactId>
                 <version>1.2.1-0</version>
+                <configuration>
+                    <!-- If ZAP is running on localhost, there is no need to define zapHost -->
+                    <zapHost>zap</zapHost>
+                    <zapPort>8080</zapPort>
+                    <targetUrl>http://myapp:8080/rest</targetUrl>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
